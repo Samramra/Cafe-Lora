@@ -243,7 +243,9 @@ nav a:hover {
   background-size: cover;
   background-position: top center;
   background-attachment: fixed;
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .popisek__kavarny {
@@ -252,15 +254,10 @@ nav a:hover {
   font-family: lobster;
   font-weight: 100;
   text-align: center;
-  position: absolute;
-  padding-top: 20%;
-  padding-left: 10%;
-  min-width: 100vh;
-  min-height: 100vh;
   backdrop-filter: blur(7px);
   width: 100%;
   height: 100%;
-  margin-top: 0;
+  margin-top: 0; /*roztahne rozostřeni na cely background*/
 }
 
 .contacts {
@@ -326,9 +323,6 @@ nav a:hover {
   .drink {
     width: 33.333%;
   }
-}
-
-@media (max-width: 800px) {
   .nav-btn {
     display: none;
   }
