@@ -1,8 +1,9 @@
 import './style.css';
 
-import { Layer } from './Layer/index.js';
+import { Drink } from './Drink/index.js';
 
 console.log('funguju!');
+
 const navBtn = document.querySelector('#nav-btn'); /*připojení tlačítka*/
 
 const zmena = () => {
@@ -10,6 +11,24 @@ const zmena = () => {
 };
 navBtn.addEventListener('click', zmena);
 /*změna na klik otevře a na klik zaveře*/
+const drinky = {
+  id: 'romano',
+  name: 'Romano',
+  ordered: false,
+  layers: [
+    {
+      color: '#fbdf5b',
+      label: 'citrón',
+    },
+    {
+      color: '#613916',
+      label: 'espresso',
+    },
+  ],
+  image: 'https://apps.kodim.cz/daweb/cafelora/assets/cups/romano.png',
+};
+const drinkyElm = document.querySelector('.drinks-list');
+drinkyElm.appendChild(Drink(drinky));
 
 let odkazyNavigace =
   document.querySelectorAll(
@@ -36,6 +55,8 @@ orderBtnElm.addEventListener('click', () => {
     /*po kliknutí na tlačítko, se změní text na tlačítku*/
   }
 });
+
+/*
 const drinkinfoElm = document.querySelector('.drink__info');
 
 const capucino1 = {
@@ -54,3 +75,4 @@ let cappucino = [capucino1, capucino2, capucino3];
 cappucino.forEach((item) => {
   drinkinfoElm.innerHTML += Layer(item);
 });
+*/
