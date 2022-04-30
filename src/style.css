@@ -310,3 +310,13 @@ nav a:hover {
     width: 33.333%;
   }
 }
+@media (min-width: 800px) {
+  .banner {
+    background-color: #e74c3c;
+  }
+}
+@media (max-width: 800px) {
+  .nav-btn {
+    display: none;
+  }
+}
